@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <title>Event Destination Challenge</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen active">
+
+        <div class="hero">
+            <div class="globe">🌍</div>
+
+            <h1>Event Destination<br>Challenge</h1>
+
+            <p class="tagline">
+                Can you guess where the world's upcoming events are happening?
+            </p>
+        </div>
+
+        <div class="event-preview">
+
+            <div class="preview-card">
+                <span>🇮🇳</span>
+                <div>
+                    <strong>Mumbai</strong>
+                    <small>Global FinTech Fest</small>
+                </div>
+            </div>
+
+            <div class="preview-card">
+                <span>🇯🇵</span>
+                <div>
+                    <strong>Aichi–Nagoya</strong>
+                    <small>Asian Games 2026</small>
+                </div>
+            </div>
+
+            <div class="preview-card">
+                <span>🇨🇦</span>
+                <div>
+                    <strong>Montréal</strong>
+                    <small>UCI Road World Championships</small>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="startBtn" class="primary-btn">
+            START CHALLENGE
+        </button>
+
+        <p class="small-note">
+            3 destinations • 15 questions
+        </p>
+
+    </section>
+
+
+    <!-- GAME SCREEN -->
+    <section id="gameScreen" class="screen">
+
+        <header class="game-header">
+
+            <button id="homeBtn" class="icon-btn" aria-label="Home">
+                🏠
+            </button>
+
+            <div class="progress">
+                <span id="questionNumber">Question 1/15</span>
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="score-box">
+                ⭐ <span id="score">0</span>
+            </div>
+
+        </header>
+
+
+        <div class="lives">
+            <span>Lives:</span>
+            <span id="livesDisplay">❤️ ❤️ ❤️</span>
+        </div>
+
+
+        <main class="question-area">
+
+            <div id="categoryBadge" class="category-badge">
+                INDIA
+            </div>
+
+            <div id="eventImage" class="event-image">
+                <div class="image-placeholder">
+                    🌍
+                    <span>Destination Image</span>
+                </div>
+            </div>
+
+            <h2 id="questionText">
+                Question will appear here
+            </h2>
+
+            <div id="answers" class="answers"></div>
+
+            <div class="action-row">
+
+                <button id="hintBtn" class="secondary-btn">
+                    💡 Hint
+                </button>
+
+                <button id="nextBtn" class="primary-btn next-btn hidden">
+                    NEXT →
+                </button>
+
+            </div>
+
+            <p id="hintText" class="hint-text hidden"></p>
+
+            <div id="feedback" class="feedback hidden"></div>
+
+        </main>
+
+    </section>
+
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="screen">
+
+        <div class="result-content">
+
+            <div class="trophy">🏆</div>
+
+            <h1>Challenge Complete!</h1>
+
+            <p class="result-subtitle">
+                Let's see how well you know these destinations.
+            </p>
+
+            <div class="final-score-card">
+
+                <span>Your Score</span>
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+                <small id="resultMessage">
+                    Great job!
+                </small>
+
+            </div>
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correctCount">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="totalCount">15</strong>
+                    <span>Questions</span>
+                </div>
+
+            </div>
+
+            <button id="playAgainBtn" class="primary-btn">
+                PLAY AGAIN
+            </button>
+
+            <button id="resultHomeBtn" class="secondary-btn">
+                BACK TO HOME
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="events.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
